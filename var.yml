@@ -7,3 +7,5 @@
      - name: This is my First Demo
        debug:
          msg: "Hello {{nick_name}}"
+     - name: ping all
+       ping:
