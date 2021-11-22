@@ -1,0 +1,9 @@
+---
+- name: Hello Git
+  hosts: all
+  vars: 
+     - nick_name:
+  tasks:
+     - name: This is my First Demo
+       debug:
+         msg: "Hello {{nick_name}}"
