@@ -1,0 +1,6 @@
+---
+- name: test pass
+  hosts: localhost
+  tasks:
+       - name: password test
+         shell: echo {{ ansible_password }}
