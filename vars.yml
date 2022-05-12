@@ -1,6 +1,8 @@
 ---
 - name: test playbook
   hosts: localhost
+  vars_files:
+    - pssing.yml
   tasks:
     - name: Create a Directory /root
       file:
@@ -12,5 +14,5 @@
 
     - name: Git checkout
       ansible.builtin.git:
-        repo: https://<username>:<password>h@github.com/proj.git
+        repo: https://{{username}}:{{password}}@github.com/snehal/proj.git
         dest: /root/test/
