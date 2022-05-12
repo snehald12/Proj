@@ -1,8 +1,6 @@
 ---
 - name: test playbook
   hosts: localhost
-  vars_files:
-    - pssing.yml
   tasks:
     - name: Create a Directory /root
       file:
