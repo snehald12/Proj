@@ -1,16 +1,10 @@
 ---
 - name: test playbook
   hosts: localhost
+  vars_files:
+    - pssing.yml
   tasks:
-    - name: Create a Directory /root
-      file:
-        path: /root/test/
-        state: directory
-        mode: 0755
-        owner: root
-        group: root
-
     - name: Git checkout
       ansible.builtin.git:
         repo: https://{{username}}:{{password}}@github.com/snehal/proj.git
-        dest: /root/test/
+        dest: /var/lib/awx/test/
