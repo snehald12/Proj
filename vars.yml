@@ -6,5 +6,5 @@
   tasks:
     - name: Git checkout
       ansible.builtin.git:
-        repo: https://{{username}}:{{password}}@github.com/snehal/proj.git
+        repo: https://{{username}}:{{token}}@github.com/snehal/proj.git
         dest: /var/lib/awx/test/
