@@ -1,6 +1,9 @@
 ---
 - name: test playbook
   hosts: localhost
+  vars:
+     - username:
+     - token:
   tasks:
     - name: Git checkout
       ansible.builtin.git:
