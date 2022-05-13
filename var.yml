@@ -2,8 +2,8 @@
 - name: Hello Git
   hosts: all
   vars: 
-     nick_name:
-     full_name:
+    - nick_name:
+    - full_name:
   tasks:
      - name: This is my First Demo
        debug:
