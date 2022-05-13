@@ -7,9 +7,9 @@
   tasks:
      - name: This is my First Demo
        debug:
-         msg: "Hello {{nick_name}}"
-     - name: This is Demo
-       debug:
-         msg: "Hello {{full_name}}"    
-     - name: ping all
-       ping:
+         msg: "Hello {{nick_name}}:{{full_name}}"
+   #  - name: This is Demo
+   #    debug:
+   #      msg: "Hello {{full_name}}"    
+   #  - name: ping all
+   #    ping:
