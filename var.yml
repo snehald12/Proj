@@ -3,9 +3,10 @@
   hosts: all
   vars: 
      - nick_name:
+     - full_name:
   tasks:
      - name: This is my First Demo
        debug:
-         msg: "Hello {{nick_name}}"
+         msg: "Hello {{nick_name}}{{full_name}}"
      - name: ping all
        ping:
