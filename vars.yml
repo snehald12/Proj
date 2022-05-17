@@ -8,4 +8,4 @@
     - name: Git checkout
       ansible.builtin.git:
         repo: https://{{username}}:{{token}}@github.com/snehal/proj.git
-        dest: /var/lib/awx/test/
+        dest: /root/test/
