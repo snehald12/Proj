@@ -2,12 +2,13 @@
 - name: Hello Git
   hosts: all
   vars: 
-     nickname:
-     fullname:
+     nick_name:
+     full_name:
   tasks:
      - name: This is my First Demo
        debug:
-         msg: "Hello {{nickname}}:{{fullname}}"
+         msg: "Hello {{nick_name}}:{{full_name}}"
+       #no_log: true
    #  - name: This is Demo
    #    debug:
    #      msg: "Hello {{full_name}}"    
