@@ -1,0 +1,12 @@
+---
+- name: test
+  hosts: localhost
+  collections:
+   - community.general
+
+  tasks:
+
+    - name: Install nmap
+      community.general.zypper:
+        name: nmap
+        state: present
