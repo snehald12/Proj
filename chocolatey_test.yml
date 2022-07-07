@@ -1,0 +1,10 @@
+---
+- name: Install Packages
+  hosts: localhost
+     collections:
+      - chocolatey.chocolatey.win_chocolatey
+   tasks:
+     - name: Install git
+       win_chocolatey:
+         name: git
+         state: present
