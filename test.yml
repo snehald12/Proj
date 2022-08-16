@@ -1,10 +1,13 @@
----
-- name: test 
-  hosts: localhost
+- hosts: all
+  gather_facts: yes
+  become: yes
+  become_user: test
+  
   tasks:
-   - name: Backup running-config
-     ios_config:
-        backup: yes
-        backup_options:
-          dir_path: /root/
-          filename: test.cfg
+     - action: ping
+     
+     - command: whoami
+       register: output
+       
+     - debug: 
+         msg: "{{ output.stdout }}"
