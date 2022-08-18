@@ -3,6 +3,7 @@
   become: yes
   become_user: test
   become_method: sudo
+  anisble_sudo_pass: 12
   
   tasks:
      - action: ping
