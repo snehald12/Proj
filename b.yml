@@ -2,7 +2,8 @@
 - name: test
   hosts: localhost
   vars:
-     - a
+     a:
   tasks:
        - name: print a
          debug:
+          msg: "{{a}}"
