@@ -1,0 +1,8 @@
+---
+- name: test
+  hosts: localhost
+  vars:
+     - a
+  tasks:
+       - name: print a
+         debug:
