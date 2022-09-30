@@ -1,6 +1,7 @@
 ---
 - name: demo playbook
   hosts: all
+  ansible_connection: local
   tasks:
   
     - name: ping localhost
