@@ -1,7 +1,6 @@
 ---
 - name: demo playbook
   hosts: all
-  connection: local
   
   tasks:
   
