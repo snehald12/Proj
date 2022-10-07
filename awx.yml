@@ -4,6 +4,5 @@
   connection: local
   tasks:
      - name: test
-       become: true
        debug: 
            msg: "Hello"
