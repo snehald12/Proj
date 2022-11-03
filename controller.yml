@@ -1,0 +1,18 @@
+- name: Playbook to configure ansible controller post installation
+  hosts: localhost
+  connection: local
+  vars:
+    controller_validate_certs: false
+  collections:
+    - ansible.controller
+    - redhat_cop.controller_configuration
+    - awx.awx
+
+  - name: Create a new token using controller username/password
+      awx.awx.token:
+        description: 'Creating token to test controller jobs'
+        scope: "write"
+        state: present
+        controller_host: "{{ controller_hostname }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
