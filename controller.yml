@@ -12,10 +12,6 @@
     controller_validate_certs: False
 
   tasks:
-    - include_role:
-        name: redhat_cop.controller_configuration.organizations
-    - include_role:
-       name: redhat_cop.controller_configuration.users
-    - include_role:
-        name: redhat_cop.controller_configuration.teams
+    - controller_meta:
+      register: result
     
