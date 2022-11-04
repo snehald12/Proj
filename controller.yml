@@ -14,4 +14,13 @@
   tasks:
     - controller_meta:
       register: result
+      
+    - name: Create organization
+      organization:
+        name: "Foo"
+        description: "Foo bar organization"
+        state: present
+        controller_host: 65.2.175.153
+        controller_username: admin
+        controller_password: admin
     
