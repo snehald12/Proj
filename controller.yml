@@ -1,4 +1,4 @@
-- name: Configure Controller in environment {{ controller_env }}
+- name: Configure Controller in environment 
   hosts: all
   connection: local
   gather_facts: no
