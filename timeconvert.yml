@@ -1,0 +1,22 @@
+---
+- hosts: localhost
+  vars:
+    start_date_time: "2022-11-30 22:00:00"
+    end_date_time: "2022-12-01 06:00:00"
+
+  tasks:
+  - name: Convert start_date_time from local to UTC time and register result
+    ansible.builtin.shell: "date -u -d @$(date -d '{{ start_date_time }}' +%s) +'%Y-%m-%d %H:%M:%S'"
+    register: result_start_date_time_conversion
+
+  - name: Convert end_date_time from local to UTC time and register result
+    ansible.builtin.shell: "date -u -d @$(date -d '{{ end_date_time }}' +%s) +'%Y-%m-%d %H:%M:%S'"
+    register: result_end_date_time_conversion
+
+  - name: Debug result_start_date_time_conversion
+    ansible.builtin.debug:
+      var: result_start_date_time_conversion
+
+  - name: Debug result_end_date_time_conversion
+    ansible.builtin.debug:
+      var: result_end_date_time_conversion
