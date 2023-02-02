@@ -1,0 +1,12 @@
+---
+- name: test
+  hosts: localhost
+   collections:
+   - sap.sap_operations
+
+  tasks:
+    - name: Fetch system info
+      sap.sap_operations.system_info:
+          username: "root"
+          password: "redhat#"
+          hostname: "vm251-81.gsslab.pnq2.redhat.com
