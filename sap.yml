@@ -1,0 +1,8 @@
+---
+- name: test sap
+  hosts: all
+  tasks:
+     - name: check sap system info 
+       sap.sap_operations.system_info:
+          instance_number: "00"
+          
