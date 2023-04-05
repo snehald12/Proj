@@ -1,0 +1,9 @@
+---
+- name: get python version
+  hosts: localhost
+  gather_facts: true
+
+  tasks:
+    - name: Print python facts
+      debug:
+        msg: "{{ ansible_facts.python }}"
