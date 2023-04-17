@@ -1,13 +1,4 @@
-- hosts: 192.168.122.248
-  gather_facts: true
-  become: yes
-  become_user: test
-  
-  tasks:
-     - action: ping
-     
-     - command: whoami
-       register: output
-       
-     - debug: 
-         msg: "{{ output.stdout }}"
+---
+
+- name: Gather information about all instances
+  amazon.aws.ec2_instance_info:
