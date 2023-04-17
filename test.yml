@@ -1,6 +1,6 @@
 ---
 - name: test playbook
-  hosts: all
+  hosts: ip-10-0-128-135.ap-south-1.compute.internal
   collections:
      - amazon.aws
   tasks:
