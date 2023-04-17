@@ -7,5 +7,6 @@
 
    - name: Gather information about all instances in AZ ap-southeast-2a
      amazon.aws.ec2_instance_info:
-       filters:
+      region: ap-south-1
+      filters:
           availability-zone: ap-south-1a
