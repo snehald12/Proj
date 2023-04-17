@@ -1,7 +1,7 @@
 ---
 - name: test playbook
   hosts: all
-   collections:
+  collections:
      - amazon.aws
   tasks:
 
