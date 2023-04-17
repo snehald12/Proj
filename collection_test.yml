@@ -1,0 +1,9 @@
+---
+
+#- name: EC2 Instance Scheduler
+# hosts: fdsahl96ce5116
+#  collections:
+#    - amazon.aws
+ 
+- name: Gather information about all instances
+  amazon.aws.ec2_instance_info:
