@@ -1,7 +1,8 @@
-- hosts: localhost
+- name: test async
+  hosts: localhost
 
-tasks:
-  - name: Simulate long running op, allow to run for 45 sec, fire and forget
-    ansible.builtin.command: /bin/sleep 15
-    async: 45
-    poll: 0
+  tasks:
+    - name: Simulate long running op, allow to run for 45 sec, fire and forget
+      ansible.builtin.command: /bin/sleep 15
+      async: 45
+      poll: 0
