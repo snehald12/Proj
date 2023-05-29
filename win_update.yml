@@ -1,6 +1,6 @@
 ---
 - name: Install update package
-  hosts: localhost
+  hosts: 13.233.106.170
   tasks:
      - name: Install all updates and reboot as many times as needed
        ansible.windows.win_updates:
