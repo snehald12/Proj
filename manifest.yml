@@ -1,0 +1,14 @@
+---
+- name: Automation Controller Manifest Playbook
+  hosts: localhost
+
+  environment:
+    CONTROLLER_HOST: vm253-134.gsslab.pnq2.redhat.com
+    CONTROLLER_USERNAME: admin
+    CONTROLLER_PASSWORD: redhat
+    CONTROLLER_VERIFY_SSL: false
+
+  tasks:
+    - name: Upload manifest to controller
+      ansible.controller.license:
+        manifest: "/root/manifest_AAP_20230525T102730Z.zip"
