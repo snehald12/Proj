@@ -9,7 +9,7 @@
        tags:
            - hello
            
-      - name: ping
-        ping:
-        tags:
+     - name: ping
+       ping:
+       tags:
            - ping
