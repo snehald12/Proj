@@ -6,3 +6,10 @@
      - name: test
        debug: 
            msg: "Hello"
+       tags:
+           - hello
+           
+      - name: ping
+        ping:
+        tags:
+           - ping
