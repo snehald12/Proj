@@ -1,8 +1,0 @@
-- hosts: localhost
-  become_method: dzdo
-  become_user: test
-  become: yes
-  
-  tasks:
-    - name: test
-      shell: date
