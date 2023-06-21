@@ -2,11 +2,11 @@
 - name: 
   hosts: localhost
   vars:
-    controller_host: "https://vm253-134.gsslab.pnq2.redhat.com/"
+    controller_host: "vm253-134.gsslab.pnq2.redhat.com"
     controller_username: "admin"
     controller_password: "redhat"
     controller_verify_ssl: false
-  connection: local
+  #connection: local
   gather_facts: false
   collections:
      - ansible.controller
