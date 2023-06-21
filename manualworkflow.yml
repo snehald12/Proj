@@ -6,14 +6,14 @@
     controller_username: "admin"
     controller_password: "redhat"
     controller_verify_ssl: false
-  #connection: local
+  connection: local
   gather_facts: false
   collections:
      - ansible.controller
   
   tasks: 
    - name: Create a workflow job template with workflow nodes in template
-     ansible.controller.workflow_job_template:
+     awx.awx.workflow_job_template:
       name: example-workflow
       inventory: Demo Inventory
       workflow_nodes:
