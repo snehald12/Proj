@@ -1,31 +1,30 @@
 ---
 - name: 
   hosts: localhost
-  environment:
-    CONTROLLER_HOST: vm253-134.gsslab.pnq2.redhat.com
-    CONTROLLER_USERNAME: admin
-    CONTROLLER_PASSWORD: redhat
-    CONTROLLER_VERIFY_SSL: false
-
-#  vars:
- #    controller_host: "https://vm253-134.gsslab.pnq2.redhat.com/"
- #   controller_username: "admin"
-  #  controller_password: "redhat"
+    #environment:
+    # CONTROLLER_HOST: vm253-134.gsslab.pnq2.redhat.com
+    #CONTROLLER_USERNAME: admin
+    #CONTROLLER_PASSWORD: redhat
+    #CONTROLLER_VERIFY_SSL: false
+  gather_facts: false
+  vars:
+    controller_host: "https://vm253-134.gsslab.pnq2.redhat.com/"
+    controller_username: "admin"
+    controller_password: "redhat"
   collections:
      - ansible.controller
   
   tasks: 
    - name: Create a workflow job template with workflow nodes in template
-     awx.awx.workflow_job_template:
+     ansible.controller.workflow_job_template:
       name: example-workflow
       inventory: Demo Inventory
       workflow_nodes:
         - identifier: node101
           unified_job_template:
-            name: t1
-            inventory:
-              organization:
-                name: Default
+            organization:
+               name: Default
+            name: t1   
             type: job_template
           related:
             success_nodes: 
@@ -45,4 +44,3 @@
             failure_nodes: []
             always_nodes: []
             credentials: []
-  register: result
