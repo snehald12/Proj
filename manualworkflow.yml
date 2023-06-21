@@ -1,10 +1,16 @@
 ---
 - name: 
   hosts: localhost
-  vars:
-    controller_host: "https://vm253-134.gsslab.pnq2.redhat.com/"
-    controller_username: "admin"
-    controller_password: "redhat"
+  environment:
+    CONTROLLER_HOST: vm253-134.gsslab.pnq2.redhat.com
+    CONTROLLER_USERNAME: admin
+    CONTROLLER_PASSWORD: redhat
+    CONTROLLER_VERIFY_SSL: false
+
+#  vars:
+ #    controller_host: "https://vm253-134.gsslab.pnq2.redhat.com/"
+ #   controller_username: "admin"
+  #  controller_password: "redhat"
   collections:
      - ansible.controller
   
