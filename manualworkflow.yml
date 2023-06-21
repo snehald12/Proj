@@ -1,61 +1,38 @@
 ---
+- name: 
 - hosts: localhost
-  become_method: dzdo
-  become_user: test
-  become: yes
+  vars:
+    controller_host: "https://vm253-134.gsslab.pnq2.redhat.com/"
+    controller_username: "admin"
+    controller_password: "redhat"
   
  - name: Create a workflow job template with workflow nodes in template
    awx.awx.workflow_job_template:
     name: example-workflow
     inventory: Demo Inventory
-    extra_vars: {'foo': 'bar', 'another-foo': {'barz': 'bar2'}}
     workflow_nodes:
       - identifier: node101
         unified_job_template:
-          name: example-project
+          name: t1
           inventory:
             organization:
               name: Default
-          type: inventory_source
+          type: job_template
         related:
-          success_nodes: []
+          success_nodes: 
+             - identifier: node201
           failure_nodes:
-            - identifier: node201
           always_nodes: []
           credentials: []
       - identifier: node201
         unified_job_template:
           organization:
             name: Default
-          name: job template 1
+          name: t2
           type: job_template
         credentials: []
         related:
           success_nodes:
-            - identifier: node301
-          failure_nodes: []
-          always_nodes: []
-          credentials: []
-      - identifier: node202
-        unified_job_template:
-          organization:
-            name: Default
-          name: example-project
-          type: project
-        related:
-          success_nodes: []
-          failure_nodes: []
-          always_nodes: []
-          credentials: []
-      - identifier: node301
-        all_parents_must_converge: false
-        unified_job_template:
-          organization:
-            name: Default
-          name: job template 2
-          type: job_template
-        related:
-          success_nodes: []
           failure_nodes: []
           always_nodes: []
           credentials: []
