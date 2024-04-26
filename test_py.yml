@@ -1,11 +1,12 @@
 ---
 - name: test
   hosts: localhost
+  collections:
+      - ansible.controller
 
   tasks:
     - name: get cred details
-      ansible.controller.project:
+      project:
         name: "p1"
         organization: "Default"
         state: exists
-      register: p1_details
