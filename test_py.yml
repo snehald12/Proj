@@ -4,7 +4,7 @@
 
   tasks:
     - name: get cred details
-      project:
+      ansible.controller.project:
         name: "p1"
         organization: "Default"
         state: exists
