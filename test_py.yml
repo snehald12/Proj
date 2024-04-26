@@ -1,9 +1,12 @@
 ---
-- name: get python version
+- name: test
   hosts: localhost
-  gather_facts: true
 
   tasks:
-    - name: Print python facts
-      debug:
-        msg: "{{ ansible_facts.python }}"
+    - name: get cred details
+      credential:
+        name: "Automation Hub Published Repository"
+        organization: "Default"
+        credential_type: "Ansible Galaxy/Automation Hub API Token"
+        state: exists
+      register: hub_cluster_aap_creds
