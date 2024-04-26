@@ -4,9 +4,8 @@
 
   tasks:
     - name: get cred details
-      credential:
-        name: "Automation Hub Published Repository"
+      project:
+        name: "p1"
         organization: "Default"
-        credential_type: "Ansible Galaxy/Automation Hub API Token"
         state: exists
-      register: hub_cluster_aap_creds
+      register: p1_details
