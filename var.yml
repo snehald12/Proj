@@ -1,14 +1,11 @@
 ---
-- name: Hello Git
-  hosts: all
-  vars: 
-     nick_name:
-     full_name:
+- name: test
+  hosts: localhost
   tasks:
      - name: This is my First Demo
-       debug:
-         msg: "Hello {{nick_name}}:{{full_name}}"
-       #no_log: true
+       shell:
+         cmd: ansible-galaxy collection list
+         #no_log: true
    #  - name: This is Demo
    #    debug:
    #      msg: "Hello {{full_name}}"    
