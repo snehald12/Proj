@@ -1,6 +1,8 @@
 ---
 collections:
-  - name:  community.general
-    version: 7.5.3
-  - vmware.vmware_rest
-  - community.vmware
+   - netapp.um_info 
+
+#  - name:  community.general
+#    version: 7.5.3
+#  - vmware.vmware_rest
+#  - community.vmware
