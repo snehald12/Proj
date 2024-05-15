@@ -5,10 +5,11 @@
      - name: This is my First Demo
        shell:
          cmd: ansible-galaxy collection list
-        register: msg
+       register: result
+       
      - name: print msg
        debug:
-         var: msg
+         var: result
        
          #no_log: true
    #  - name: This is Demo
