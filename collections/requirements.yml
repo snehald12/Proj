@@ -1,7 +1,6 @@
 ---
 collections:
    - netapp.um_info 
-   - community.general
 
 #  - name:  community.general
 #    version: 7.5.3
