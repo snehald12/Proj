@@ -4,5 +4,5 @@
   tasks:
       - name: print
         debug:
-           msg: "Hello"
+           msg: "Hello world"
            
