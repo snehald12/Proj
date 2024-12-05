@@ -1,0 +1,8 @@
+- name: gather html report
+  hosts: all
+  tasks:
+      - name: create html report
+        ansible.builtin.template:
+            src: nginx.conf.j2
+            dest: /var/tmp/test.html
+        run_once: true
