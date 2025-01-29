@@ -4,7 +4,10 @@
   gather_facts: false
   vars:
      a:
+     b:
   tasks:
        - name: print a
          debug:
           msg: "{{a}}"
+             : "{{b}}"
+              
