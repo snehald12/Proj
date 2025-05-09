@@ -1,6 +1,6 @@
 ---
 - name: kevintest
-  host: cor089xa091
+  hosts: cor089xa091
   gather_facts: false
   tasks:
     - name: run check cmd
