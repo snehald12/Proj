@@ -4,7 +4,8 @@
   gather_facts: false
   tasks:
     - name: run check cmd
-      ansible.builtin.shell: "/usr/mqm/bin/setmqenv -s ; /usr/mqm/bin/dspmq -m CORTSADM1"
+      ansible.builtin.shell: 
+        cmd: "/usr/mqm/bin/setmqenv -s ; /usr/mqm/bin/dspmq -m CORTSADM1"
       register: dspmq_out
 
     -  name: Display command output
