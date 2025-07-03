@@ -1,0 +1,12 @@
+---
+- name: test
+  hosts: all
+  gather_facts: false
+  vars:
+     b:
+
+  tasks:
+       - name: print a
+         debug:
+          msg: "{{b}}"
+             
