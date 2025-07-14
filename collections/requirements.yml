@@ -1,23 +1,23 @@
 ---
-roles:
-  # Install a role from Ansible Galaxy.
-  - name: geerlingguy.java
-    version: "1.9.6" # note that ranges are not supported for roles
-
-
 collections:
-  # Install a collection from Ansible Galaxy.
-  - name: geerlingguy.php_roles
-    version: ">=0.9.3"
-    source: https://galaxy.ansible.com
-
-
-#---
-#collections:
-#   - netapp.um_info 
+   - netapp.um_info 
 #   - ibm.power_aix
 
 #  - name:  community.general
 #    version: 7.5.3
 #  - vmware.vmware_rest
 #  - community.vmware
+
+#---
+#roles:
+#  # Install a role from Ansible Galaxy.
+#  - name: geerlingguy.java
+#    version: "1.9.6" # note that ranges are not supported for roles
+
+
+#collections:
+# Install a collection from Ansible Galaxy.
+#  - name: geerlingguy.php_roles
+#    version: ">=0.9.3"
+#    source: https://galaxy.ansible.com
+
