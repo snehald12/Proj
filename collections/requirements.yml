@@ -1,6 +1,6 @@
 ---
 collections:
-  - name: git+https://github.com/snehald12/Proj.git
+  - name: git+https://github.com/snehald12/Proj.git#/collections/requirements.yml
     type: git
     version: main
 
