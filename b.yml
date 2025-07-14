@@ -6,7 +6,7 @@
      b:
 
   tasks:
-       - name: print a
+       - name: print result of b variable
          debug:
           msg: "{{b}}"
              
