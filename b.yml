@@ -6,7 +6,5 @@
      b:
 
   tasks:
-       - name: print result of b variable
-         debug:
-          msg: "{{b}}"
-             
+       - name: ping the hosts
+         ping:
