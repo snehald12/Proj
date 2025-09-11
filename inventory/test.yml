@@ -1,10 +1,4 @@
----
-- name: test
-  hosts: all
-  gather_facts: false
-  vars:
-     a:
-  tasks:
-       - name: print a
-         debug:
-          msg: "{{a}}"
+[group1]
+192.168.122.65
+[group2]
+192.168.122.246
