@@ -1,0 +1,7 @@
+- name: copy file from controller to remote  
+  hosts: all
+  tasks:
+    - name: Copying the file from Ansible Controller to Remote host
+      copy:
+        src: "/opt/test/snehal.txt"
+        dest: "/sd/copy"
