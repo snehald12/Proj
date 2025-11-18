@@ -8,4 +8,4 @@
         owner: awx
         group: awx
         mode: 0775
-        flat: no
+        flat: yes
