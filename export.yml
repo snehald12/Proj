@@ -1,0 +1,22 @@
+- name: Export constructed inventory from Controller
+  hosts: localhost
+  gather_facts: false
+
+  environment:
+    AWXKIT_API_BASE_PATH: '/api/controller/'
+    CONTROLLER_OPTIONAL_API_URLPATTERN_PREFIX: '/api/controller/'
+
+  tasks:
+    - name: Export inventories
+      ansible.controller.export:
+        inventory: "21"
+        controller_username: admin
+        controller_password: admin
+        controller_host: 'https://192.168.122.246'
+        validate_certs: false
+      register: export_result
+
+    - name: Save export to JSON file
+      copy:
+        content: "{{ export_result.assets | to_nice_json }}"
+        dest: /root/inventory_export.json
